@@ -7,12 +7,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"math"
 
 	"github.com/newrelic/newrelic-telemetry-sdk-go/internal"
 )
 
 const (
-	maxCompressedSizeBytes = 1 << 20
+	maxCompressedSizeBytes = math.Pow(10, 6)
 )
 
 // request contains an http.Request and the UncompressedBody which is provided
